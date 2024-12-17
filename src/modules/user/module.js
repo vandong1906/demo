@@ -11,6 +11,7 @@ router.post('/logout', transport.logout);
 router.delete('/remove/:id',transport.Remove);
 /*--------------------get user All -------------------- */
 router.post('/', transport.findUser);
+router.get('/Pagination', transport.getUsersWithPagination);
 router.get('/getAll',middleware.authenticateBearerToken,transport.get);
 router.get('/getAllCookies',middleware.authenticateCookiesToken,transport.get);
 

@@ -3,6 +3,7 @@ const env = process.env;
 const jwt = require('jsonwebtoken');
 const { getAll, create, update,find,remove,findAccount } = require('../../usecase/index');
 const { Resend } = require('resend');
+const user = require("../../model/user");
 const resend = new Resend("re_Ktfm6B7S_L1kSAHcHAmZaxmDKJkiYKvia");
 async function get(req, res, next) {
     try {
@@ -145,6 +146,35 @@ async function Remove(req, res) {
         throw error;
     }
 }
+
+const getUsersWithPagination = async (req, res) => {
+    // Get page and size from query parameters, default to page 1 and size 10
+    const page = parseInt(req.query.page) || 1;
+    const size = parseInt(req.query.size) || 10;
+
+    // Calculate the offset based on the current page and size
+    const offset = (page - 1) * size;
+
+    try {
+        // Fetch users from the database with limit and offset
+        const users = await user.findAndCountAll({
+            limit: size,
+            offset: offset,
+            order: [['createdAt', 'DESC']], // Optional: ordering users by creation date
+        });
+
+        // Return paginated response
+        res.status(200).json({
+            total: users.count, // Total number of users
+            pages: Math.ceil(users.count / size), // Total number of pages
+            currentPage: page,
+            users: users.rows, // The paginated users
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+};
 module.exports = {
     get,
     createUser,
@@ -153,5 +183,6 @@ module.exports = {
     logout,
     sendMail,
     verifyMail,
-    Remove
+    Remove,
+    getUsersWithPagination
 }

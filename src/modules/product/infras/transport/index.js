@@ -1,6 +1,8 @@
-const { console } = require("inspector");
+
 const { getAll,create,remove,update,getOne, getLimit} = require("../../usecase");
 const path=require('path');
+const product =require('../../model/index');
+const user = require("../../../user/model/user");
 async function get(req, res, next) {
     try {
         res.json(await getAll())
@@ -53,10 +55,34 @@ async function removeProduct(req,res,next) {
         console.log("error",error)
     }
 }
+const getProductsWithPagination = async (req, res) => {
+    const page = parseInt(req.query.page) || 1;
+    const size = parseInt(req.query.size) || 10;
+    const offset = (page - 1) * size;
+
+    try {
+
+        const products = await product.findAndCountAll({
+            limit: size,
+            offset: offset,
+            order: [['createdAt', 'DESC']],
+        });
+        res.status(200).json({
+            total: products.count,
+            pages: Math.ceil(products.count / size),
+            currentPage: page,
+            products: products.rows,
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+};
 module.exports={
     get,
     createProduct,
     updateProduct,
     removeProduct,
     getProduct,
-getLimitProduct}
+getLimitProduct,
+    getProductsWithPagination}

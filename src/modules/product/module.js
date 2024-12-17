@@ -7,4 +7,5 @@ router.get('/limit', modules.getLimitProduct);
 router.post('/', modules.createProduct);
 router.put('/:id', modules.updateProduct);
 router.delete('/:id', modules.removeProduct);
+router.get("/pagination",modules.getProductsWithPagination)
 module.exports = router;
