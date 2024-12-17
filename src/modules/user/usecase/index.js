@@ -1,4 +1,4 @@
-
+const { Op } = require('sequelize');
 var jwt = require('jsonwebtoken');
 const user = require('../model/user');
 async function getAll() {
@@ -9,9 +9,26 @@ async function getAll() {
 
         console.error('Unable to connect to the database:', error);
     }
-
 }
 
+async function findAccount(Users) {
+    try {
+        temp = await user.findOne(
+            {
+                where: {
+                    [Op.or]: [{  User_Name: Users.User_Name}, {gmail:Users.mail }],
+
+                }
+            })
+        if (temp != null) {
+            return temp.dataValues;
+        }
+        return temp;
+
+    } catch (error) {
+        throw error;
+    }
+}
 async function find(Users) {
     try {
         temp = await user.findOne(
@@ -82,4 +99,5 @@ module.exports = {
     update,
     remove,
     find,
+    findAccount
 }

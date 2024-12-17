@@ -1,7 +1,7 @@
 
 const env = process.env;
 const jwt = require('jsonwebtoken');
-const { getAll, create, update,find,remove } = require('../../usecase/index');
+const { getAll, create, update,find,remove,findAccount } = require('../../usecase/index');
 const { Resend } = require('resend');
 const resend = new Resend("re_Ktfm6B7S_L1kSAHcHAmZaxmDKJkiYKvia");
 async function get(req, res, next) {
@@ -86,10 +86,11 @@ async function verifyMail(req, res, next) {
 }
 async function sendMail(req, res, next) {
     try {
-        if (!await find(req.body)) {
-            res.status("400");
-            res.send("Invalid details!");
-        } {
+        if (await findAccount(req.body)) {
+            res.send("Invalid details!").status(400);
+        }
+        else
+        {
             const code = Math.floor(1000 + Math.random() * 9000);
             const validEmail = new RegExp('^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$');
             if (validEmail.test(req.body.mail)) {
@@ -128,7 +129,6 @@ async function sendMail(req, res, next) {
         console.log("error", error)
     }
 }
-
 async function updateUser(req, res, next) {
     try {
         res.json(await update(req.params.id, req.body))

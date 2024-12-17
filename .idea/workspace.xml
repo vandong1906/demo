@@ -5,24 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7f75047-b013-4a0e-989b-e877ccaf4429" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/tasks.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/brand/infras/transpot/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/brand/infras/transpot/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/brand/usecase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/brand/usecase/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/product/infras/transport/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/product/infras/transport/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/product/model/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/product/model/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/product/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/product/module.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/product/usecase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/product/usecase/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/infras/transport/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/infras/transport/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/user/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/module.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/user/usecase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/usecase/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uploads/f0f578ec-09a1-42c3-ac74-670a81a097541731476810503.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uploads/f0f578ec-09a1-42c3-ac74-670a81a097541731476813970.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/uploads/landscape-architecture-fun-facts-outside-productions-blog-980x5511731921933004.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +40,7 @@
     "Node.js.index.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "RegisterEmail",
     "javascript.nodejs.core.library.configured.version": "20.9.0",
     "javascript.nodejs.core.library.typings.version": "20.9.5",
     "last_opened_file_path": "C:/Users/vandong/Downloads/Backend",
@@ -134,7 +119,7 @@
       <workItem from="1734256915814" duration="620000" />
       <workItem from="1734270970977" duration="1384000" />
       <workItem from="1734317336138" duration="948000" />
-      <workItem from="1734404238929" duration="1379000" />
+      <workItem from="1734404238929" duration="2419000" />
     </task>
     <servers />
   </component>
