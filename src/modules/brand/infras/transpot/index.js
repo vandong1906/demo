@@ -12,6 +12,7 @@ async function get(req, res, next) {
 
 async function createBrand(req, res, next) {
     try {
+        console.log(req.body)
         res.json(await create(req.body))
     } catch (error) {
         console.log("error", err)

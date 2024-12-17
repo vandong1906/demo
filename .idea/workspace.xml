@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c7f75047-b013-4a0e-989b-e877ccaf4429" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/tasks.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/brand/infras/transpot/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/brand/infras/transpot/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/brand/usecase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/brand/usecase/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/product/infras/transport/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/product/infras/transport/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/product/model/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/product/model/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/product/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/product/module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/product/usecase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/product/usecase/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/user/infras/transport/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/infras/transport/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/user/module.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/user/usecase/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/user/usecase/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uploads/f0f578ec-09a1-42c3-ac74-670a81a097541731476810503.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uploads/f0f578ec-09a1-42c3-ac74-670a81a097541731476813970.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/uploads/landscape-architecture-fun-facts-outside-productions-blog-980x5511731921933004.jpg" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2peGJxEbnHIExzEO5v7qabDnsPq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Docker.src/Dockerfile.executor": "Run",
+    "Node.js.index.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "20.9.0",
+    "javascript.nodejs.core.library.typings.version": "20.9.5",
+    "last_opened_file_path": "C:/Users/vandong/Downloads/Backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Node.js.index.js">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/index.js" working-dir="$PROJECT_DIR$/src">
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="src/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="src/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.index.js" />
+        <item itemvalue="Docker.src/Dockerfile" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7f75047-b013-4a0e-989b-e877ccaf4429" name="Changes" comment="" />
+      <created>1733119072387</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733119072387</updated>
+      <workItem from="1733119077405" duration="1087000" />
+      <workItem from="1733482342726" duration="319000" />
+      <workItem from="1733486084425" duration="554000" />
+      <workItem from="1733491810986" duration="1516000" />
+      <workItem from="1733540219864" duration="2599000" />
+      <workItem from="1733548041978" duration="584000" />
+      <workItem from="1733637628601" duration="22000" />
+      <workItem from="1733723199003" duration="863000" />
+      <workItem from="1733724107769" duration="30000" />
+      <workItem from="1733938165000" duration="296000" />
+      <workItem from="1734062757948" duration="7402000" />
+      <workItem from="1734074681888" duration="28000" />
+      <workItem from="1734079911299" duration="73000" />
+      <workItem from="1734089074477" duration="62000" />
+      <workItem from="1734089295678" duration="140000" />
+      <workItem from="1734091398427" duration="4693000" />
+      <workItem from="1734144095625" duration="536000" />
+      <workItem from="1734145318075" duration="299000" />
+      <workItem from="1734146930664" duration="771000" />
+      <workItem from="1734247457901" duration="4294000" />
+      <workItem from="1734256915814" duration="620000" />
+      <workItem from="1734270970977" duration="1384000" />
+      <workItem from="1734317336138" duration="948000" />
+      <workItem from="1734404238929" duration="1379000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/modules/product/usecase/index.js</url>
+          <line>56</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

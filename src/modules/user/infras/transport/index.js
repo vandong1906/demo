@@ -20,51 +20,20 @@ function generateAccessToken(user) {
 function decodedAccess(token) {
     return jwt.verify(token,process.env.SECRET);
 };
-function authenticateBearerToken(req, res, next) {
-    const token = req.header('Authorization')?.split(" ")[1];
-    if (!token) {
-        return res.status(403).json({ message: 'Access denied, no token provided' });
-    }
-    try {
-        const decoded = jwt.verify(token, process.env.SECRET);
 
-        if (decoded.name != 'vandong') {
-            return res.status(400).json({ message: 'No permission' });
-        }
-        next();
-
-    } catch (error) {
-        return res.status(401).json({ message: 'Invalid token' });
-    }
-}
-function authenticateCookiesToken(req, res, next) {
-    const token = req.cookies['jwt'];
-    if (!token) {
-        return res.status(403).json({ message: 'Access denied, no token provided' });
-    }
-    try {
-        const decoded = jwt.verify(token, process.env.SECRET);
-        console.log(decoded);
-        if (decoded.role != 'admin' || decoded.status != 'active') {
-            return res.status(400).json({ message: 'No permission' });
-        }
-        next();
-
-    } catch (error) {
-        return res.status(401).json({ message: 'Invalid token' });
-    }
-}
 function logout(req, res, next) {
     res.clearCookie('jwt').status(200).send('succesull');
 }
 async function findUser(req, res, next) {
     try {
         const user = await find(req.body);
-        if (user != undefined) {
-            if (user.status == "unactive") {
+        if (user !== undefined) {
+            if (user.status === "unactive") {
                 res.send('unactive').status(400);
             } else {
-                const token = generateAccessToken(user);
+                const {User_Name,role,status} =user;
+                console.log(User_Name,role,status);
+                const token = generateAccessToken({User_Name,role,status});
                 res.cookie('jwt', token, {
                     sameSite: 'None',
                     httpOnly: true,
@@ -117,7 +86,7 @@ async function verifyMail(req, res, next) {
 }
 async function sendMail(req, res, next) {
     try {
-        if (!find(req.body)) {
+        if (!await find(req.body)) {
             res.status("400");
             res.send("Invalid details!");
         } {
@@ -182,8 +151,6 @@ module.exports = {
     updateUser,
     findUser,
     logout,
-    authenticateBearerToken,
-    authenticateCookiesToken,
     sendMail,
     verifyMail,
     Remove

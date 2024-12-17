@@ -17,12 +17,14 @@ const products = sequelize.define('product', {
     image_data: {
         type: DataTypes.STRING,
         allowNull: false,
+    },
+    description:{
+        type:DataTypes.STRING,
+        allowNull: false
     }
 }
 );
 
-Brands.hasMany(products, {
-    sourceKey: 'Brand_id',
-    foreignKey: 'Brand_id'
-}),
+Brands.hasMany(products, { foreignKey: 'Brand_id' }); // A Brand has many Products
+products.belongsTo(Brands, { foreignKey: 'Brand_id' });
 module.exports = products;

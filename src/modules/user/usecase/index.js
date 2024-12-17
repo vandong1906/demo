@@ -11,12 +11,14 @@ async function getAll() {
     }
 
 }
+
 async function find(Users) {
     try {
         temp = await user.findOne(
             {
                 where: {
-                    User_Name: Users.User_Name
+                    User_Name: Users.User_Name,
+                    password:Users.password
                 }
             })
         if (temp != null) {

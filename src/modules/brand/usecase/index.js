@@ -15,7 +15,6 @@ async function create(brand) {
     try {
         await Brands.create({
             Brand_Name: brand.Brand_Name,
-            Country_id: brand.Country_id,
         })
     } catch (error) {
         console.log("error", error)

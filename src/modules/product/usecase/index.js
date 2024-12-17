@@ -1,22 +1,19 @@
 
-const multer = require('multer');
-
-const fileUpload = require('express-fileupload');
-const path=require('path');
+const path = require('path');
 const products = require('../model');
+const Brands = require('../../brand/model/index');
 
 async function getAll() {
     try {
-        return await products.findAll();
+        return await products.findAll({
+            include:Brands
+        });
     }
     catch (error) {
-
         console.error('Unable to connect to the database:', error);
     }
 
 }
-
-
 async function getOne(id) {
     try {
         return await products.findOne(
@@ -28,12 +25,27 @@ async function getOne(id) {
     }
 
 }
-async function Check(id,number) {
+async function getLimit() {
+    try {
+        return await products.findAll({
+            limit: 10,
+        })
+    }
+    catch (error) {
+
+        console.error('Unable to connect to the database:', error);
+    }
+
+}
+async function Check(id, number) {
     try {
         return await products.findOne(
-            { where: { product_id: id,
-                number:number
-             } })
+            {
+                where: {
+                    product_id: id,
+                    number: number
+                }
+            })
     }
     catch (error) {
 
@@ -42,14 +54,14 @@ async function Check(id,number) {
 
 }
 async function create(product, imageFile) {
-
     try {
-        const uploadDir = path.join('src', 'uploads');
+        const uploadDir = 'uploads';
         console.log(uploadDir);
-        const name=imageFile.name.split(".");
+        const name = imageFile.name.split(".");
         console.log(name);
-        const pathName= name[0]+ Date.now()+'.'+name[1];
-        const uploadPath = path.join(uploadDir,pathName);
+        const pathName = name[0] + Date.now() + '.' + name[1];
+        const uploadPath = path.join(uploadDir, pathName);
+        console.log(uploadPath);
         imageFile.mv(uploadPath, (err) => {
             if (err) {
                 return 0;
@@ -57,13 +69,14 @@ async function create(product, imageFile) {
 
         });
         console.log(imageFile);
-       const a= await products.create({
-            product_Name: product.product_Name,
+        const a = await products.create({
+            product_Name: product.Product_name,
             number: product.number,
             Brand_id: product.Brand_id,
-            image_data:  pathName,
+            description: product.description,
+            image_data: pathName,
         })
-        if(a!=null){
+        if (a != null) {
             return 1;
         }
     } catch (error) {
@@ -102,4 +115,5 @@ module.exports = {
     remove,
     getOne,
     Check,
+    getLimit
 }

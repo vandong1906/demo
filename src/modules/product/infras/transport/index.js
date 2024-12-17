@@ -1,4 +1,5 @@
-const { getAll,create,remove,update,getOne} = require("../../usecase");
+const { console } = require("inspector");
+const { getAll,create,remove,update,getOne, getLimit} = require("../../usecase");
 const path=require('path');
 async function get(req, res, next) {
     try {
@@ -14,11 +15,19 @@ async function getProduct(req, res, next) {
         console.log("error",error)
     }
 }
-
-
-
-async function  createProduct(req,res,next) {
+async function getLimitProduct(req, res, next) {
     try {
+        res.json(await getLimit());
+    } catch (error) {
+        console.log("error",error)
+    }
+}
+
+
+
+async function createProduct(req,res,next) {
+    try {
+        console.log(req.files.file);
         const imageFile = req.files.file;
         console.log(imageFile);
        const flag=await create(req.body,imageFile);
@@ -50,4 +59,4 @@ module.exports={
     updateProduct,
     removeProduct,
     getProduct,
-}
+getLimitProduct}
